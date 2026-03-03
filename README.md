@@ -30,7 +30,7 @@ Drop-in replacement. Zero infrastructure barrier.
 ## Check Engine Status
 
 ``` bash
-curl https://5d3c-34-125-193-242.ngrok-free.app/status
+curl PUBLIC_URL/status
 ```
 
 ------------------------------------------------------------------------
@@ -38,7 +38,7 @@ curl https://5d3c-34-125-193-242.ngrok-free.app/status
 ## Chat Completion (Windows CMD)
 
 ``` bash
-curl -X POST "https://5d3c-34-125-193-242.ngrok-free.app/v1/chat/completions" -H "Content-Type: application/json" -d "{\"model\":\"gpt-oss:20b\",\"messages\":[{\"role\":\"user\",\"content\":\"Explain why open AI infrastructure matters.\"}]}"
+curl -X POST "PUBLIC_URL/v1/chat/completions" -H "Content-Type: application/json" -d "{\"model\":\"gpt-oss:20b\",\"messages\":[{\"role\":\"user\",\"content\":\"Explain why open AI infrastructure matters.\"}]}"
 ```
 
 ------------------------------------------------------------------------
@@ -49,7 +49,7 @@ curl -X POST "https://5d3c-34-125-193-242.ngrok-free.app/v1/chat/completions" -H
 from openai import OpenAI
 
 client = OpenAI(
-    base_url="https://5d3c-34-125-193-242.ngrok-free.app/v1",
+    base_url="PUBLIC_URL/v1",
     api_key="none"
 )
 
