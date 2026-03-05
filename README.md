@@ -1,5 +1,8 @@
 # Umoja Compute
 
+[![Open In
+Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/umoja-compute/blob/main/Umoja_Compute_Genesis_v1.ipynb)
+
 ![MIT License](https://img.shields.io/badge/license-MIT-green) ![OpenAI
 Compatible](https://img.shields.io/badge/OpenAI-Compatible-blue) ![GPU
 Powered](https://img.shields.io/badge/GPU-T4%20Powered-orange) ![Open
@@ -14,6 +17,8 @@ enables developers to run large language models on distributed GPU
 compute and expose fully **OpenAI-compatible APIs** --- without paying
 expensive cloud inference costs.
 
+Launch your own OpenAI-compatible LLM endpoint in minutes.
+
 It allows you to:
 
 -   Run open models like `gpt-oss:20b`
@@ -21,7 +26,19 @@ It allows you to:
 -   Monitor usage, tokens, and performance
 -   Integrate seamlessly with existing OpenAI SDK-based applications
 
-Drop-in replacement. Zero infrastructure barrier.
+**Drop-in replacement. Zero infrastructure barrier.**
+
+------------------------------------------------------------------------
+
+# 🎬 Demo
+
+Example interaction with the API:
+
+**User** Explain why open AI infrastructure matters.
+
+**Model** Open AI infrastructure democratizes access to advanced
+intelligence, allowing developers worldwide to build, experiment, and
+innovate without dependence on centralized cloud providers.
 
 ------------------------------------------------------------------------
 
@@ -78,10 +95,10 @@ Umoja Compute removes those barriers by providing:
 -   ✅ Persistent model caching (Google Drive)
 -   ✅ Public HTTPS endpoints via secure tunneling
 -   ✅ Built-in observability (tokens, latency, request metrics)
--   ✅ Agent-ready and workflow-ready integration (n8n, Docker,
-    automation systems)
+-   ✅ Agent-ready and workflow-ready integration (automation systems,
+    orchestration tools)
 
-**Build, test, scale --- without infrastructure debt.**
+**Build, test, and scale without infrastructure debt.**
 
 ------------------------------------------------------------------------
 
@@ -102,39 +119,52 @@ Umoja Compute democratizes AI infrastructure by enabling:
 -   Enterprise prototyping without cloud lock-in
 -   Ownership and control over AI systems
 
-Infrastructure should not be a privilege.
+**Infrastructure should not be a privilege.**
 
 ------------------------------------------------------------------------
 
 # 🏗 Architecture
 
-Client Application\
-→ Public HTTPS Endpoint\
-→ Flask API\
-→ Ollama Runtime\
-→ Open Model (`gpt-oss:20b`)\
-→ Structured JSON Response
+    Client Application
+            ↓
+    Public HTTPS Endpoint (ngrok)
+            ↓
+    Flask API Layer
+            ↓
+    Ollama Runtime
+            ↓
+    Open Model (gpt-oss:20b)
+            ↓
+    Structured JSON Response
 
-Compute Layer: - Google Colab GPU (T4) - Model cached in Google Drive -
-Public routing via ngrok - Token & request observability
+**Compute Layer**
+
+-   Google Colab GPU (T4)
+-   Model cached in Google Drive
+-   Public routing via ngrok
+-   Token & request observability
 
 ------------------------------------------------------------------------
 
 # ⚡ Quick Start
 
-1.  Open notebook\
-    `Umoja_Compute_Genesis_v1.ipynb`
+### 1️⃣ Open the notebook
 
-2.  Get auth token from https://ngrok.com/
+    Umoja_Compute_Genesis_v1.ipynb
 
-3.  In Colab:
+### 2️⃣ Get auth token
 
-    -   Runtime → Change runtime type → GPU (T4)
-    -   Run all cells
+https://ngrok.com/
 
-4.  Copy your public endpoint
+### 3️⃣ Configure Colab
 
-Test:
+Runtime → Change runtime type → **GPU (T4)**
+
+### 4️⃣ Run all cells
+
+Copy your public endpoint.
+
+### 5️⃣ Test the endpoint
 
 ``` bash
 curl -X POST "$PUBLIC_URL/v1/chat/completions" -H "Content-Type: application/json" -d '{
@@ -174,6 +204,18 @@ validation.
 
 ------------------------------------------------------------------------
 
+# 📂 Project Structure
+
+    umoja-compute
+    │
+    ├── Umoja_Compute_Genesis_v1.ipynb
+    ├── README.md
+    ├── LICENSE
+    └── docs
+        └── architecture.md
+
+------------------------------------------------------------------------
+
 # 🛣 Roadmap
 
 -   Streaming support
@@ -192,7 +234,7 @@ Umoja Compute is building the **open infrastructure layer for AI** ---
 empowering developers to run, scale, and control their own intelligence
 stack without vendor dependency.
 
-Open models deserve open infrastructure.
+**Open models deserve open infrastructure.**
 
 ------------------------------------------------------------------------
 
@@ -207,5 +249,10 @@ MIT License
 We welcome contributors who believe AI infrastructure should be
 accessible.
 
-Open an issue. Submit a pull request.\
+Open an issue. Submit a pull request.
+
 Let's build the compute layer of the open AI ecosystem.
+
+------------------------------------------------------------------------
+
+⭐ If you find Umoja Compute useful, consider starring the repository.
