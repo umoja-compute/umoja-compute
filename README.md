@@ -1,7 +1,7 @@
 # Umoja Compute
 
 [![Open In
-Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/umoja-compute/blob/main/Umoja_Compute_Genesis_v1.ipynb)
+Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sXDsh2jj9NvDOVMxdMfqFFyJS69rhmdG)
 
 ![MIT License](https://img.shields.io/badge/license-MIT-green) ![OpenAI
 Compatible](https://img.shields.io/badge/OpenAI-Compatible-blue) ![GPU
